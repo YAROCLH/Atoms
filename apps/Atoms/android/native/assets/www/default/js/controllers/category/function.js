@@ -9,12 +9,20 @@
 	function init_category(){
 		console.log("category loaded again");
 		category_js=true;
-		data_category="idUser="+global_UserId+"&idCategory=1";
-		$.when(get_Data(Uncompleted_Json,data_category)).then(function(challenge_data){display_categoryData(challenge_data)});
+		setChallenges(1);
+		
 		
 	}
 		
+	function setChallenges(idCategory){
+		console.log("new Challenges")
+		data_category="idUser="+global_UserId+"&idCategory="+idCategory;
+		$.when(get_Data(Uncompleted_Json,data_category)).then(function(challenge_data){display_categoryData(challenge_data)});	
+	}
+	
+	
 	function display_categoryData(category_data){
+		console.log("new Challenges"+category_data)
 	    category_buffer="<div id='PaddinMain' class='Margin'>";
 		var data_details="...";// temporal details
 		for(var i=0;i<category_data.length;i++){
@@ -22,7 +30,7 @@
 						  '<div class="row NoPaddingLR cat" style="padding-top:5%;">'+
 					   	  '<div class="col-lg-4 MenuBackgroundG"><div class="row">'+
 					      '<div class="col-xs-8" style="padding:0px; heigh:100%;">';
-			if(category_data[i].Status=="True"){
+			if(category_data[i].Status=="true"){
 				img_src="./images/done.png";
 				category_status="doneClick"; }
 			else{
@@ -42,6 +50,7 @@
 		}
 		category_buffer=category_buffer+"</div>";
 		$("#PaddingMain").replaceWith(category_buffer);
+		console.log("new Challenges"+category_data[0].Name)
 	}
 	
 	

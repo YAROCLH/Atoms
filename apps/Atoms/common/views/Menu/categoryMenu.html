@@ -11,25 +11,5 @@
 </div>
 <script type="text/javascript">
 
-var counter = 0;
-var categories = ["Wellness", "Productivity","Social","Environment"];
 
-$(document).on('click', ".CategoryOneClick",function()
-{
-	counter--;
-	if(counter>=0 && counter < categories.length)
-	{
-		$("#CategoryName").html(categories[counter]);
-	}
-	
-});
-$(document).on('click', ".CategoryThreeClick",function()
-{
-	counter++;
-	if(counter>=0 && counter < categories.length)
-	{
-		$("#CategoryName").html(categories[counter]);
-	}
-	
-});
 </script>

@@ -17,7 +17,9 @@
 	}
 	
 	function DoFail(){
-		alert("User Not Found");
+		$("#Password").val("");
+		alert("User Not Found or Wrong Password");
+		
 	}
 	
 	function DoSuccess(login_data){

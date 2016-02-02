@@ -14,7 +14,7 @@
 	var lastView="";
 	var prevView=[];
 	var currentChallenge;
-	
+	var ChallengesView;
 	//used for only load the js controllers once
 	var index_js=false,
 		challenge_js=false,
@@ -31,7 +31,7 @@
 	//User Data
 	var global_UserId;
 	var global_UserName;
-	
+
 	// used to init a controller when the view is set again
 	var recall;
 	var img_uri;

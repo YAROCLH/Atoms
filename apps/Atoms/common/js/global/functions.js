@@ -30,6 +30,7 @@
 			}}}
 	}
 	
+	
 	function loadJS(newView,status_view){
 	//	console.log("#>>>"+newView+status_view+"<<<");
 		if(!status_view){
@@ -42,7 +43,11 @@
 			recall = new Function("init_"+newView+"()");//execute the init in the function controller of the view
 			recall();  }
 	}
-
+	function setCategory(idCategory){
+		$("#MainPanel").load("views/AllViews/category.html",function(){
+			init_category(idCategory);
+		});
+	}
 
 	function get_Data(url_json,data){
 		console.log("Recived Data: "+data);
@@ -59,7 +64,7 @@
 					json_data=$.map(json, function(elements) {return elements});},
 				error:function(jqxhr, textStatus, error ){  
 					var err = textStatus + ", " + error;
-			        console.log( "Request Failed: " + err );
+			        console.log( "Request Failed: " +url_json+" Error: "+ err );
 					}
 				})).then(function(){
 			  return json_data;

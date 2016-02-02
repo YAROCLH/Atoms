@@ -1,17 +1,22 @@
 
 	$(document).ready(function(){
-		init_category();
+		challengesView=$("#PaddingMain");
+		init_category(1);
+		
 	});
 	
 	
-	function init_category(){
-		console.log("category loaded again");
+	function init_category(id){
 		category_js=true;
-		data_category="idUser="+global_UserId+"&idCategory=1";
-		$.when(get_Data(Uncompleted_Json,data_category)).then(function(challenge_data){display_categoryData(challenge_data)});
-		
+		if(id!=null){
+		category_CurrentCategory=id;}
+		data_category="idUser="+global_UserId+"&idCategory="+category_CurrentCategory;
+		$.when(get_Data(Uncompleted_Json,data_category)).then(function(challenge_data){
+			display_categoryData(challenge_data)});
 	}
-		
+	
+	
+	
 	function display_categoryData(category_data){
 	    category_buffer="<div id='PaddinMain' class='Margin'>";
 		var data_details="...";// temporal details
@@ -39,7 +44,7 @@
 		    			  '</div></div></div></div></div></div>'
 		}
 		category_buffer=category_buffer+"</div>";
-		$("#PaddingMain").replaceWith(category_buffer);
+		$(".MainContainer").replaceWith(category_buffer);
 	}
 	
 	

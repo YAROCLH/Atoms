@@ -15,6 +15,10 @@
 			//console.log(prevView);
 		});
 		loadJS(newView,status_view);
+			if(newView=="category"){
+				$("#MenuPanel").load("views/Menu/categoryMenu.html"); 
+				loadJS("categoryMenu",categoryMenu_js);
+			}else{
 			if(newView=="challenge"){
 				$("#MenuPanel").load("views/Menu/challengeMenu.html"); 
 				loadJS("challengeMenu",challengeMenu_js);
@@ -25,7 +29,7 @@
 				loadJS("menu",menu_js);
 				//console.log("MainMenu")
 				}	
-			}}
+			}}}
 	}
 	
 	function loadJS(newView,status_view){
