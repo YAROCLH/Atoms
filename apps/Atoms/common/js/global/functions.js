@@ -6,11 +6,9 @@
 			//loadJS(newView,status);
 		}else{
 		$("#MainPanel").load("views/AllViews/"+newView+".html",function(){
-			//lastView=currentView;
-			if(!back||back==null){
+			if(!back||back==null&&newView!="challenge"){
 			prevView.push(currentView);}
 			currentView=newView;
-			//console.log(prevView);
 		});
 		loadJS(newView,status_view);
 			if(newView=="category"){

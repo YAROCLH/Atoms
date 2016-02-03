@@ -2,27 +2,24 @@
 /* JavaScript content from js/controllers/category/function.js in folder common */
 
 	$(document).ready(function(){
-		init_category();
+		challengesView=$("#PaddingMain");
+		init_category(1);
+		
 	});
 	
 	
-	function init_category(){
-		console.log("category loaded again");
+	function init_category(id){
 		category_js=true;
-		setChallenges(1);
-		
-		
+		if(id!=null){
+		category_CurrentCategory=id;}
+		data_category="idUser="+global_UserId+"&idCategory="+category_CurrentCategory;
+		$.when(get_Data(Uncompleted_Json,data_category)).then(function(challenge_data){
+			display_categoryData(challenge_data)});
 	}
-		
-	function setChallenges(idCategory){
-		console.log("new Challenges")
-		data_category="idUser="+global_UserId+"&idCategory="+idCategory;
-		$.when(get_Data(Uncompleted_Json,data_category)).then(function(challenge_data){display_categoryData(challenge_data)});	
-	}
+	
 	
 	
 	function display_categoryData(category_data){
-		console.log("new Challenges"+category_data)
 	    category_buffer="<div id='PaddinMain' class='Margin'>";
 		var data_details="...";// temporal details
 		for(var i=0;i<category_data.length;i++){
@@ -49,8 +46,7 @@
 		    			  '</div></div></div></div></div></div>'
 		}
 		category_buffer=category_buffer+"</div>";
-		$("#PaddingMain").replaceWith(category_buffer);
-		console.log("new Challenges"+category_data[0].Name)
+		$(".MainContainer").replaceWith(category_buffer);
 	}
 	
 	

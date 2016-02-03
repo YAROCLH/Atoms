@@ -1,14 +1,14 @@
 
 	// Json url   change this when web service is online
-	var Server="http://127.0.0.1:8080/liberty-HelloWorld/Pages/"
+	var Server="http://atomsservice.w3ibm.mybluemix.net/Pages/"
 	var Login_Json=Server+"Login.jsp";
 	var myScore_Json=Server+"UserScore.jsp";
 	var Uncompleted_Json=Server+"Challenges.jsp";
-	var Completed_Json=Server+"CompletedChallenges.jsp"
+	var Status_Json=Server+"Status.jsp"
 	var TopRank_Json=Server+"Top10.jsp";
 	var MyRank_Json=Server+"UserRank.jsp";
 	var Categories_Json=Server+"Categories.jsp";
-	
+	var Submit_Json=Server+"SubmitChallenge.jsp"
 	//Navigation variables
 	var currentView="";
 	var lastView="";

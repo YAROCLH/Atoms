@@ -12,7 +12,7 @@
 	);
 
 	$(document).on('click', ".LevelsClick",function(){
-			alert('Levels');
+			
 		}
 	);
 
