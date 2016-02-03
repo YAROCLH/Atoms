@@ -12,16 +12,19 @@
 		});
 		loadJS(newView,status_view);
 			if(newView=="category"){
-				$("#MenuPanel").load("views/Menu/categoryMenu.html"); 
+				$("#MenuPanel").load("views/Menu/menu.html"); 
+				$("#NavegacionCatego").load("views/Menu/categoryMenu.html"); 
 				loadJS("categoryMenu",categoryMenu_js);
 			}else{
 			if(newView=="challenge"){
 				$("#MenuPanel").load("views/Menu/challengeMenu.html"); 
+				$("#NavegacionCatego").empty();
 				loadJS("challengeMenu",challengeMenu_js);
 				//alert("Challenge menu");
 			}else{
 				if(newView=="login"){}else{
 				$("#MenuPanel").load("views/Menu/menu.html");
+				$("#NavegacionCatego").empty();
 				loadJS("menu",menu_js);
 				//console.log("MainMenu")
 				}	

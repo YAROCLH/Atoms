@@ -2,7 +2,7 @@
 /* JavaScript content from js/global/init.js in folder common */
 
 	// Json url   change this when web service is online
-	var Server="http://127.0.0.1:8080/liberty-HelloWorld/Pages/"
+	var Server="http://atomsservice.w3ibm.mybluemix.net/Pages/"
 	var Login_Json=Server+"Login.jsp";
 	var myScore_Json=Server+"UserScore.jsp";
 	var Uncompleted_Json=Server+"Challenges.jsp";
