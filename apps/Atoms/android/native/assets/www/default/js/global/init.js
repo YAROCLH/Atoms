@@ -11,12 +11,14 @@
 	var MyRank_Json=Server+"UserRank.jsp";
 	var Categories_Json=Server+"Categories.jsp";
 	var Submit_Json=Server+"SubmitChallenge.jsp"
+	
 	//Navigation variables
 	var currentView="";
 	var lastView="";
 	var prevView=[];
 	var currentChallenge;
 	var ChallengesView;
+	
 	//used for only load the js controllers once
 	var index_js=false,
 		challenge_js=false,

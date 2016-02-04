@@ -5,8 +5,11 @@
 	function setView(newView,status_view,back){
 		//console.log(">>>"+newView+status_view+"<<<");
 		if(newView==null||newView==""){
-			//loadJS(newView,status);
+			
 		}else{
+			if(newView=="login"){
+				$("#MainPanelGeneral").load("views/Menu/menu.html");
+			}else{
 		$("#MainPanel").load("views/AllViews/"+newView+".html",function(){
 			if(!back||back==null&&newView!="challenge"){
 			prevView.push(currentView);}
@@ -14,19 +17,19 @@
 		});
 		loadJS(newView,status_view);
 			if(newView=="category"){
-				$("#MenuPanel").load("views/Menu/categoryMenu.html"); 
+				$("#MenuPanel").load("views/Menu/menu.html"); 
+				$("#NavegacionCatego").load("views/Menu/categoryMenu.html"); 
 				loadJS("categoryMenu",categoryMenu_js);
 			}else{
 			if(newView=="challenge"){
 				$("#MenuPanel").load("views/Menu/challengeMenu.html"); 
+				$("#NavegacionCatego").empty();
 				loadJS("challengeMenu",challengeMenu_js);
 				//alert("Challenge menu");
-			}else{
-				if(newView=="login"){}else{
+			}else{	
 				$("#MenuPanel").load("views/Menu/menu.html");
-				loadJS("menu",menu_js);
-				//console.log("MainMenu")
-				}	
+				$("#NavegacionCatego").empty();
+				loadJS("menu",menu_js);		}
 			}}}
 	}
 	

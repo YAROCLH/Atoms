@@ -1,6 +1,6 @@
 
 	// Json url   change this when web service is online
-	var Server="http://atomsservice.w3ibm.mybluemix.net/Pages/"
+	var Server="http://atoms.mybluemix.net/Pages/"
 	var Login_Json=Server+"Login.jsp";
 	var myScore_Json=Server+"UserScore.jsp";
 	var Uncompleted_Json=Server+"Challenges.jsp";
@@ -9,12 +9,14 @@
 	var MyRank_Json=Server+"UserRank.jsp";
 	var Categories_Json=Server+"Categories.jsp";
 	var Submit_Json=Server+"SubmitChallenge.jsp"
+	
 	//Navigation variables
 	var currentView="";
 	var lastView="";
 	var prevView=[];
 	var currentChallenge;
 	var ChallengesView;
+	
 	//used for only load the js controllers once
 	var index_js=false,
 		challenge_js=false,
