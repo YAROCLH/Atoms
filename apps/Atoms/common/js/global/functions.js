@@ -6,11 +6,14 @@
 			//loadJS(newView,status);
 		}else{
 		if(newView=="login"){
-			$("#MainPanel").load("views/AllViews/login.html"); 
+			$("#MainBody").load("views/AllViews/login.html"); 
 		}
 		else{
-			console.log("Set a view in main")
-		$("#MainPanel").load("views/AllViews/"+newView+".html",function(){
+			console.log("Set"+newView+" in main")
+			var a=$("#MainPanel");
+			if(a==null){alert("No")}
+		     $("#MainPanel").load("views/AllViews/"+newView+".html",function(){
+			
 			if(!back||back==null&&newView!="challenge"){
 			prevView.push(currentView);}
 			currentView=newView;

@@ -35,11 +35,17 @@
 	}
 	
 	function displayData(myRank){
+		
 		$("#container").append(rank_header);
 		$("#container").append(rank_buffer);
 		$("#container").append(rank_myData);
 		$("#myRank").text(myRank[0].myPosition);
 		$("#myRankNumber").text(myRank[0].myPosition);
-		$("#myName").text(myRank[0].Name);
+		
 		$("#myScore").text(myRank[0].Score);
+		if(myRank[0].Score==0){
+			$("#myName").text(global_UserName)
+		}else{
+			$("#myName").text(myRank[0].Name);
+		}
 	}

@@ -10,6 +10,8 @@
 			if(login_data[0].id==-1){DoFail(-1)}
 			else{
 				console.log(">>Login "+user+pass);
+				$( ".loginContainer" ).remove();
+				console.log("Set Main")
 				$.when(DoSuccess(login_data)).then(function(){
 					setView("index", index_js, false);
 				});
