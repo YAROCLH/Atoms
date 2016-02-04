@@ -9,7 +9,7 @@
 			$("#MainPanel").load("views/AllViews/login.html"); 
 		}
 		else{
-		
+			console.log("Set a view in main")
 		$("#MainPanel").load("views/AllViews/"+newView+".html",function(){
 			if(!back||back==null&&newView!="challenge"){
 			prevView.push(currentView);}
@@ -27,10 +27,11 @@
 				loadJS("challengeMenu",challengeMenu_js);
 				//alert("Challenge menu");
 			}else{
+				if(newView=="login"){}else{
 				$("#MenuPanel").load("views/Menu/menu.html");
 				$("#NavegacionCatego").empty();
 				loadJS("menu",menu_js);
-				
+				}
 			}}}
 	}
 	
