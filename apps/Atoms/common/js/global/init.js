@@ -4,6 +4,8 @@
 */
 
 		// Json url   change this when web service is online
+		//http://atoms.mybluemix.net/Pages/
+		//http://127.0.0.1:12884/liberty-HelloWorld/Pages/
 		var Server="http://atoms.mybluemix.net/Pages/",
 			Login_Json=Server+"Login.jsp",
 			myScore_Json=Server+"UserScore.jsp",
@@ -15,8 +17,8 @@
 			Submit_Json=Server+"SubmitChallenge.jsp";
 		
 		//PassPhrase used for AES Encryption
-		var PassPhrase="1q2w3e4r5t"; 
-		
+		var PassPhrase="BB85B8C1336755EAD02368931499380D"; 
+		var IV="31fbf42ee1d26041";
 		//Device OS
 		var devicePlatform;
 		
@@ -26,7 +28,7 @@
 		var prevView=[];
 		var currentChallenge;
 		var ChallengesView;
-		
+		var isLogin;
 		//used for only load the js controllers once
 		var index_js=false,
 			challenge_js=false,

@@ -19,9 +19,9 @@
  * Functions
  */
 		function DoLogin(user,pass){
-			var enc_user=CryptoJS.AES.encrypt(user,PassPhrase);
-			var enc_pass=CryptoJS.AES.encrypt(user,PassPhrase);
-			var data_login="UserName="+user+"&UserPass="+pass;
+			var enc_user=encodeString(name);
+			var enc_pass=encodeString(pass);
+			var data_login="UserName="+enc_user+"&UserPass="+enc_pass;
 			$.when(get_Data(Login_Json,data_login)).then(function(login_data){
 			if(login_data[0].id==0){	
 				DoFail(0);

@@ -58,13 +58,16 @@
 		}
 		
 		function submitSuccess(){
-			setView("category",true,false);
+			category_CurrentCategory=1;
+			setView("category",true,true);
 			alert("Challenge Completed");
 		}
 		
 		function submitFail(){
-			setView("category",true,false);
+			setView("category",true,true);
 			alert("Something Went Wrog Try Again Later");
 		}
+		
+		
 		
 		

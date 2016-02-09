@@ -58,6 +58,8 @@
 /js/controllers/Sample.js
 /js/controllers/status.js
 /js/controllers/yourRank.js
+/js/core.js
+/js/enc-base64.js
 /js/global/GlobalController.js
 /js/global/init.js
 /js/initOptions.js

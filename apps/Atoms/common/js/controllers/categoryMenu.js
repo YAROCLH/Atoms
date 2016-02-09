@@ -32,6 +32,7 @@
 			$.when(get_Data(Categories_Json)).then(function(category_data){
 				CM_categoryData=category_data;
 				CM_counter=1;
+				$("#CategoryName").html(CM_categoryData[CM_counter-1].Name);
 			});
 		}
 		
