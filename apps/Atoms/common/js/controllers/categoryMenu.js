@@ -10,18 +10,21 @@
 		$(document).ready(function(){
 			init_categoryMenu();
 		});
-		$(document).on('click','.CategoryOneClick',function(){
-			if(CM_counter>1&&CM_counter<=CM_categoryData.length){
-				CM_counter--;
-				$("#CategoryName").html(CM_categoryData[CM_counter-1].Name);
-				setCategory(CM_counter);	}else{}
+		$(".CategoryOneClick").on("click",function(){
+			counter--;
+			if(counter>=0 && counter < category_data.length){
+				$("#CategoryName").html(category_data[counter].Name);
+				setCategory(counter+1);
+			}
+			
 		});
-		
-		$(document).on('click', ".CategoryThreeClick",function(){
-			if(CM_counter>0 && CM_counter<CM_categoryData.length){
-				CM_counter++;
-				$("#CategoryName").html(CM_categoryData[CM_counter-1].Name);
-				setCategory(CM_counter);	}else{}
+        $(".CategoryThreeClick").on("click",function(){
+			counter++;
+			if(counter>=0 && counter < category_data.length){
+				$("#CategoryName").html(category_data[counter].Name);
+				setCategory(counter+1);
+			}
+			
 		});
 	
 /**
