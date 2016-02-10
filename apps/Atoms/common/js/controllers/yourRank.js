@@ -14,7 +14,7 @@
 		$(document).ready(function(){
 			init_yourRank();
 		});
-		$(document).on('click', ".ActiveRed",function(){
+		$(".Click123").on("click",function(){
 			setView("badges",badges_js,false);
 		});
 /**
