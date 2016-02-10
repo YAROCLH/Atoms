@@ -61,7 +61,6 @@
 				$("#myScore").text(myRank[0].Score);
 				$("#myName").text(global_UserName)
 			}
-			
 		}
 		
 		
