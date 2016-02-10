@@ -12,7 +12,7 @@
 		});
 		$(".CategoryOneClick").on("click",function(){
 			CM_counter--;
-			if(CM_counter>=0 && CM_counter < CM_categoryData.length){
+			if(CM_counter>1 && CM_counter < CM_categoryData.length){
 				$("#CategoryName").html(CM_categoryData[CM_counter].Name);
 				setCategory(CM_counter+1);
 			}
@@ -20,7 +20,7 @@
 		});
         $(".CategoryThreeClick").on("click",function(){
         	CM_counter++;
-			if(CM_counter>=0 && CM_counter < CM_categoryData.length){
+			if(CM_counter>1 && CM_counter < CM_categoryData.length){
 				$("#CategoryName").html(CM_categoryData[CM_counter].Name);
 				setCategory(CM_counter+1);
 			}
