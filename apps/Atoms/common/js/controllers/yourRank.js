@@ -14,9 +14,7 @@
 		$(document).ready(function(){
 			init_yourRank();
 		});
-		$(".Click123").on("click",function(){
-			setView("badges",badges_js,false);
-		});
+		
 /**
  * Functions
  */
@@ -61,6 +59,7 @@
 				$("#myScore").text(myRank[0].Score);
 				$("#myName").text(global_UserName)
 			}
+			
 		}
 		
 		
