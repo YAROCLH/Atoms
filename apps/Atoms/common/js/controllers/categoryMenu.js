@@ -11,18 +11,18 @@
 			init_categoryMenu();
 		});
 		$(".CategoryOneClick").on("click",function(){
-			counter--;
-			if(counter>=0 && counter < category_data.length){
-				$("#CategoryName").html(category_data[counter].Name);
-				setCategory(counter+1);
+			CM_counter--;
+			if(CM_counter>=0 && CM_counter < CM_categoryData.length){
+				$("#CategoryName").html(CM_categoryData[CM_counter].Name);
+				setCategory(CM_counter+1);
 			}
 			
 		});
         $(".CategoryThreeClick").on("click",function(){
-			counter++;
-			if(counter>=0 && counter < category_data.length){
-				$("#CategoryName").html(category_data[counter].Name);
-				setCategory(counter+1);
+        	CM_counter++;
+			if(CM_counter>=0 && CM_counter < CM_categoryData.length){
+				$("#CategoryName").html(CM_categoryData[CM_counter].Name);
+				setCategory(CM_counter+1);
 			}
 			
 		});
