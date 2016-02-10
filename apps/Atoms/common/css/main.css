@@ -449,3 +449,7 @@ width:110px;
 	color:#ffffff;
 	color:rgba(0, 0, 0, 0.4);
 }
+.NoActiveModule
+{
+	opacity:0.6;
+}
