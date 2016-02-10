@@ -11,20 +11,16 @@
 			init_categoryMenu();
 		});
 		$(".CategoryOneClick").on("click",function(){
-			CM_counter--;
-			if(CM_counter>1 && CM_counter < CM_categoryData.length){
-				$("#CategoryName").html(CM_categoryData[CM_counter].Name);
-				setCategory(CM_counter+1);
-			}
-			
+			if(CM_counter>1&&CM_counter<=CM_categoryData.length){
+				CM_counter--;
+				$("#CategoryName").html(CM_categoryData[CM_counter-1].Name);
+				setCategory(CM_counter);	}else{}
 		});
-        $(".CategoryThreeClick").on("click",function(){
-        	CM_counter++;
-			if(CM_counter>1 && CM_counter < CM_categoryData.length){
-				$("#CategoryName").html(CM_categoryData[CM_counter].Name);
-				setCategory(CM_counter+1);
-			}
-			
+		$(".CategoryThreeClick").on("click",function(){
+			if(CM_counter>0 && CM_counter<CM_categoryData.length){
+				CM_counter++;
+				$("#CategoryName").html(CM_categoryData[CM_counter-1].Name);
+				setCategory(CM_counter);	}else{}
 		});
 	
 /**
