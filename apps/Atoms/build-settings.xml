@@ -7,4 +7,12 @@
         <minification includes="**" level="none"/>
         <concatenation includes="**"/>
     </android>
+    <ipad>
+        <minification includes="**" level="none"/>
+        <concatenation includes="**"/>
+    </ipad>
+    <iphone>
+        <minification includes="**" level="none"/>
+        <concatenation includes="**"/>
+    </iphone>
 </buildSettings>

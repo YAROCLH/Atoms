@@ -6,7 +6,7 @@
 		// Json url   change this when web service is online
 		//http://atoms.mybluemix.net/Pages/
 		//http://127.0.0.1:12884/liberty-HelloWorld/Pages/
-		var Server="http://atoms.mybluemix.net/Pages/",
+		var Server="http://127.0.0.1:12884/liberty-HelloWorld/Pages/",
 			Login_Json=Server+"Login.jsp",
 			myScore_Json=Server+"UserScore.jsp",
 			Uncompleted_Json=Server+"Challenges.jsp",

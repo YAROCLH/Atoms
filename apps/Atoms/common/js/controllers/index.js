@@ -9,6 +9,7 @@
 		$(document).ready(function(){
 			init_index();
 			devicePlatform = device.platform;
+			console.log(devicePlatform)
 		});
 		 $(document).on('click', ".ChallengesClick",function(){
 				setView("category",category_js);		
@@ -30,7 +31,8 @@
  */
 		function init_index(){
 			index_js=true; 
-			data_index="idUser="+global_UserId;
+			data_index="idUser="+Base64.encode(global_UserId);
+			//data_index="idUser="+global_UserId;
 			$.when(get_Data(myScore_Json,data_index)).then(function(score_data){
 				$("#my_Complete").text(score_data[0].Completed);
 				$("#my_Score").text(score_data[0].Position);

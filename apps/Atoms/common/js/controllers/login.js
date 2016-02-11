@@ -10,8 +10,6 @@
 		$(document).on('click', ".Login",function(){
 			var Login_id=$("#UserId").val();
 			var Login_pass=$("#Password").val();
-			//var enc_user=encodeString(name);
-			//var enc_pass=encodeString(pass);
 			DoLogin(Login_id,Login_pass);
 		});
   
@@ -19,7 +17,8 @@
  * Functions
  */
 		function DoLogin(user,pass){
-			var data_login="UserName="+user+"&UserPass="+pass;
+			var data_login="UserName="+encodeString(user)+"&UserPass="+encodeString(pass);
+			//var data_login="UserName="+user+"&UserPass="+pass;
 			$.when(get_Data(Login_Json,data_login)).then(function(login_data){
 			if(login_data[0].id==0){	
 				DoFail(0);

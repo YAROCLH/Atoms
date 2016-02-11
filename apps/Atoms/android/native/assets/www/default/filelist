@@ -43,7 +43,7 @@
 /images/prefoto.jpg
 /images/thumbnail.png
 /index.html
-/js/aes.js
+/js/Base64.js
 /js/bootstrap.js
 /js/bootstrap.min.js
 /js/controllers/badges.js
@@ -58,8 +58,6 @@
 /js/controllers/Sample.js
 /js/controllers/status.js
 /js/controllers/yourRank.js
-/js/core.js
-/js/enc-base64.js
 /js/global/GlobalController.js
 /js/global/init.js
 /js/initOptions.js

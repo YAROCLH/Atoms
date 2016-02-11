@@ -145,10 +145,8 @@
 		}
 		*/
 		function encodeString(toEncode){
-			//CryptoJS.enc.Base64.stringify(toEncode);
-			var wordArray = CryptoJS.enc.Utf8.parse(toEncode);
-			var base64 = CryptoJS.enc.Base64.stringify(wordArray);
-			console.log("Encoded:"+base64)
+			var base64 =window.btoa(toEncode);
+			console.log("Encoded "+base64);
 			return base64;
 		}
 		

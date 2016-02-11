@@ -34,7 +34,9 @@
 		function init_category(id){
 			category_js=true;
 			if(id!=null){	category_CurrentCategory=id;	}
-			data_category="idUser="+global_UserId+"&idCategory="+category_CurrentCategory;
+			data_category="idUser="+encodeString(global_UserId)+"&idCategory="+encodeString(category_CurrentCategory);
+			console.log("Data_Cat: "+data_category);
+			//data_category="idUser="+global_UserId+"&idCategory="+category_CurrentCategory;
 			$.when(get_Data(Uncompleted_Json,data_category)).then(function(challenge_data){
 				display_categoryData(challenge_data)	
 			});

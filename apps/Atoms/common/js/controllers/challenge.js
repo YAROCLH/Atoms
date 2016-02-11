@@ -25,7 +25,7 @@
 		
 		function takePicture(){
 			navigator.camera.getPicture(onSucces,onFail,{
-			quality: 50, 
+			quality: 25, 
 			sourceType: source,
 			destinationType: destinationType.FILE_URI
 			});
@@ -45,8 +45,10 @@
 		function DoSubmit(){
 			var comment=$("#commentFoto").val();
 			if(camera_success&&comment!=""){
+			//	data_submit="idUser="+Base64.encode(global_UserId)+"&idChallenge="+Base64.encode(currentChallenge)+
+					//		"&Attach="+Base64.encode(comment)+"&Photo="+Base64.encode("NO PHOTO BY NOW");
 				data_submit="idUser="+global_UserId+"&idChallenge="+currentChallenge+
-							"&Attach="+comment+"&Photo=NO PHOTO BY NOW";
+						"&Attach="+comment+"&Photo="+"NO PHOTO BY NOW";
 			$.when(get_Data(Submit_Json,data_submit)).then(function(challenge_data){
 				if(challenge_data[0].STATUS==1){
 					submitSuccess();
@@ -60,7 +62,6 @@
 		function submitSuccess(){
 			category_CurrentCategory=1;
 			setView("category",true,true);
-			alert("Challenge Completed");
 		}
 		
 		function submitFail(){

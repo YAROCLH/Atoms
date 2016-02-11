@@ -22,7 +22,8 @@
  */
 		function init_yourRank(){
 			rank_js=true;
-			var data_myrank="idUser="+global_UserId;
+			//var data_myrank="idUser="+global_UserId;
+			var data_myrank="idUser="+Base64.encode(global_UserId);
 			$.when(get_Data(TopRank_Json)).then(function(topRank){
 				$.when(get_Data(MyRank_Json,data_myrank)).then(function(myRank){
 					rank_inTop=false;
