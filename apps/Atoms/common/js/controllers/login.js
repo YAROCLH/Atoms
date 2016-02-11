@@ -37,9 +37,15 @@
 		function DoFail(ErrCode){
 			if(ErrCode==0){
 				$("#Password").val("");
-				alert("User Not Found or Wrong Password");
+				//$('#AtomsModal').append("<h2>User Not Found or Wrong Password</h2>");
+				$('#myModalLabel').text("User Not Found or Wrong Password");
+				$('#AtomsModal').modal('show');
+				//alert("User Not Found or Wrong Password");
 			}else if(ErrCode==-1){
-				alert("Something Went Wrong Please Try Again Later")	}
+				$('#myModalLabel').text("Something Went Wrong Please Try Again Later");
+				$('#AtomsModal').modal('show');
+				//alert("Something Went Wrong Please Try Again Later")	
+			}
 			
 		}
 		

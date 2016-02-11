@@ -21,11 +21,12 @@
 	
 		$(document).on('click', ".doneClick",function(){
 			var challengeId= $(this).attr('value');
-		    alert("Challenge id: "+challengeId+" Done");
+		    //alert("Challenge id: "+challengeId+" Done");
 		});
 		$(document).on('click',".DetailsClickCategory",function(){
 			var ChallengeDetails= $(this).attr('value');
-			alert(ChallengeDetails)
+			$('#myModalLabel').text(ChallengeDetails);
+			$('#AtomsModal').modal('show');
 		});
 	
 /**
