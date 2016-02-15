@@ -31,8 +31,6 @@
 			challenge_js=true;
 			onSubmit=false;
 			camera_success=false;
-			console.log("This is the challenge: "+currentChallenge);
-			
 		}
 		
 		function takePicture(){
