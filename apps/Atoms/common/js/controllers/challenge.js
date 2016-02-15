@@ -14,7 +14,8 @@
 			init_challenge();
 			
 		});
-		$(document).on("click","#CameraPhoto",function(){takePicture()});
+		$(document).on("click","#CameraPhoto",function(){
+			takePicture()	});
 		$(document).on("click",".getMyPoints",function(){
 			if(!onSubmit){
 				onSubmit=true;
@@ -45,7 +46,6 @@
 		
 		function onSucces(image_uri){
 			camera_success=true;
-			//$('#AtomsModal').modal('show');
 			$("#prefoto").attr("src",image_uri);
 		}
 		

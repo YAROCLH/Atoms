@@ -3,7 +3,6 @@
  * Variables Declaration
 */
 
-		// Json url   change this when web service is online
 		//http://atoms.mybluemix.net/Pages/
 		//http://127.0.0.1:12884/liberty-HelloWorld/Pages/
 		var Server="http://atoms.mybluemix.net/Pages/",
@@ -19,6 +18,7 @@
 		//PassPhrase used for AES Encryption
 		var PassPhrase="BB85B8C1336755EAD02368931499380D"; 
 		var IV="31fbf42ee1d26041";
+		
 		//Device OS
 		var devicePlatform;
 		
@@ -27,7 +27,6 @@
 			lastView="";
 		var prevView=[];
 		var currentChallenge;
-		var ChallengesView;
 		var isLogin;
 		//used for only load the js controllers once
 		var index_js=false,
@@ -48,7 +47,7 @@
 		
 		// used to init a controller when the view is set again
 		var recall;
-		var img_uri;
+		
 	
 	
 	

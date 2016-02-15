@@ -146,7 +146,6 @@
 		*/
 		function encodeString(toEncode){
 			var base64 =window.btoa(toEncode);
-			console.log("Encoded "+base64);
 			return base64;
 			//return toEncode;
 		}
