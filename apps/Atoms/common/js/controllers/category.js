@@ -21,7 +21,8 @@
 	
 		$(document).on('click', ".doneClick",function(){
 			var challengeId= $(this).attr('value');
-		    //alert("Challenge id: "+challengeId+" Done");
+			$('#myModalLabel').text("Done!");
+			$('#AtomsModal').modal('show');
 		});
 		$(document).on('click',".DetailsClickCategory",function(){
 			var ChallengeDetails= $(this).attr('value');
@@ -36,7 +37,6 @@
 			category_js=true;
 			if(id!=null){	category_CurrentCategory=id;	}
 			data_category="idUser="+encodeString(global_UserId)+"&idCategory="+encodeString(category_CurrentCategory);
-			//data_category="idUser="+global_UserId+"&idCategory="+category_CurrentCategory;
 			$.when(get_Data(Uncompleted_Json,data_category)).then(function(challenge_data){
 				display_categoryData(challenge_data)	
 			});
@@ -44,7 +44,6 @@
 		
 		function display_categoryData(category_data){
 		    category_buffer="<div id='PaddinMain' class='Margin'>";
-			var data_details="...";// temporal details
 			for(var i=0;i<category_data.length;i++){
 				category_buffer=category_buffer+
 							  '<div class="row NoPaddingLR cat" style="padding-top:5%;">'+

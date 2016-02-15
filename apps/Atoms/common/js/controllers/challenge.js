@@ -12,7 +12,6 @@
  */
 		$(document).ready(function(){
 			init_challenge();
-			
 		});
 		$(document).on("click","#CameraPhoto",function(){
 			takePicture()	});

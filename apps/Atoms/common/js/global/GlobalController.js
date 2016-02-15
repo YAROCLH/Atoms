@@ -78,9 +78,7 @@
 		function loadJS(newView,status_view){
 			if(!status_view){
 				$.getScript("js/controllers/"+newView+".js");
-				console.log(">>>Loading "+newView+" for 1st time");
 			}else{
-				console.log(">>>Reloading "+newView);
 				recall = new Function("init_"+newView+"()");
 				recall();  }
 		}
@@ -134,20 +132,10 @@
 			  });
 		}
 		
-		/*function encryptString(stringToEncrypt) {
-			var EncryptionKey = PassPhrase;
-			var EncryptionIv = IV;
-		    var encrypted = CryptoJS.AES.encrypt(stringToEncrypt, EncryptionKey);
-		    console.log("Enc:"+encrypted);
-		    console.log("Ret:"+encrypted.ciphertext.toString(CryptoJS.enc.Base64))
-		    //return encrypted.ciphertext.toString(CryptoJS.enc.Base64);
-		    return encrypted;
-		}
-		*/
+		
 		function encodeString(toEncode){
 			var base64 =window.btoa(toEncode);
 			return base64;
-			//return toEncode;
 		}
 		
 	    function exitApp() {

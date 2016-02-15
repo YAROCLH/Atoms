@@ -18,33 +18,29 @@
  */
 		function DoLogin(user,pass){
 			var data_login="UserName="+encodeString(user)+"&UserPass="+encodeString(pass);
-			//var data_login="UserName="+user+"&UserPass="+pass;
 			$.when(get_Data(Login_Json,data_login)).then(function(login_data){
-			if(login_data[0].id==0){	
-				DoFail(0);
-			}else{
-				if(login_data[0].id==-1){
-					DoFail(-1)
+				if(login_data[0].id==0){	
+					DoFail(0);
 				}else{
-					$(".loginContainer").remove();
-					$.when(DoSuccess(login_data)).then(function(){
-						setView("index",index_js,false);
-					});
+					if(login_data[0].id==-1){
+						DoFail(-1)
+					}else{
+						$(".loginContainer").remove();
+						$.when(DoSuccess(login_data)).then(function(){
+							setView("index",index_js,false);
+						});		 }
 				}
-			}});
+			});
 		}
 		
 		function DoFail(ErrCode){
 			if(ErrCode==0){
 				$("#Password").val("");
-				//$('#AtomsModal').append("<h2>User Not Found or Wrong Password</h2>");
 				$('#myModalLabel').text("User Not Found or Wrong Password");
 				$('#AtomsModal').modal('show');
-				//alert("User Not Found or Wrong Password");
 			}else if(ErrCode==-1){
 				$('#myModalLabel').text("Something Went Wrong Please Try Again Later");
 				$('#AtomsModal').modal('show');
-				//alert("Something Went Wrong Please Try Again Later")	
 			}
 			
 		}

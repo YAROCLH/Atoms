@@ -20,11 +20,11 @@
 		});
 
 		$(document).on('click', ".LevelsClick",function(){
-			//alert('Levels: Inactive by Now');
+			
 		});
 
 		$(document).on('click', ".RulesClick",function(){
-			//alert('Rules: Inactive by Now');
+			
 		});
 /**
  * Functions
@@ -32,7 +32,6 @@
 		function init_index(){
 			index_js=true; 
 			data_index="idUser="+encodeString(global_UserId);
-			//data_index="idUser="+global_UserId;
 			$.when(get_Data(myScore_Json,data_index)).then(function(score_data){
 				$("#my_Complete").text(score_data[0].Completed);
 				$("#my_Score").text(score_data[0].Position);
