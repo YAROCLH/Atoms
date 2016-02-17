@@ -2,10 +2,15 @@
 /**
  * Variables Declaration
  */
-
+		var Remember=false;
+		var ToSave;
 /**
  * Events
- */
+ */		
+		$(document).ready(function(){
+			init_login();
+		});
+
 
 		$(document).on('click', ".Login",function(){
 			var Login_id=$("#UserId").val();
@@ -16,6 +21,19 @@
 /**
  * Functions
  */
+		
+		function init_login(){
+			login_js=true;
+			var result=localStorage.getItem("Remember");
+			if(result==null){
+				$("#UserId").val("")
+			}else{
+				var text=result+"";
+				$("#UserId").val(text);	
+			}
+			
+		}
+		
 		function DoLogin(user,pass){
 			var data_login="UserName="+encodeString(user)+"&UserPass="+encodeString(pass);
 			$.when(get_Data(Login_Json,data_login)).then(function(login_data){
@@ -25,6 +43,10 @@
 					if(login_data[0].id==-1){
 						DoFail(-1)
 					}else{
+						
+						if($("#RememberCheck").is(':checked')){	
+							Save(user);
+						}else{}
 						$(".loginContainer").remove();
 						$.when(DoSuccess(login_data)).then(function(){
 							setView("index",index_js,false);
@@ -45,7 +67,18 @@
 			
 		}
 		
-		function DoSuccess(login_data){
+		function DoSuccess(login_data,user){
 			global_UserId=login_data[0].id;
-			global_UserName=login_data[0].Name;
+			global_UserName=login_data[0].Name;		
 		}
+		function Save(user){
+			localStorage.setItem("Remember", user);
+		}
+		
+		
+				 
+		
+		
+		
+		
+		

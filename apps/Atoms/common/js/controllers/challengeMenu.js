@@ -10,7 +10,7 @@
 			init_challengeMenu();
 		});
 
-		/*$(document).on('click', ".BackClickMenu",function(){
+		/*$(document).on('click', ".BackClickMenu",function(){ 
 			SetLastView();
 		});
 		*/
@@ -22,11 +22,10 @@
  * Functions
  */
 		function init_challengeMenu(){
-			console.log("init CM**")
 			challengeMenu_js=true;
 		}
 		
-		function back_Click(){
+		function back_Click(){//Probar si funciona en ios
 			SetLastView();
 		}
 	

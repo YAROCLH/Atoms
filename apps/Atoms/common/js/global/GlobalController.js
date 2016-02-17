@@ -76,11 +76,13 @@
 		 * @param status_view: true if the view was loaded previously
 		 */
 		function loadJS(newView,status_view){
+			
 			if(!status_view){
 				$.getScript("js/controllers/"+newView+".js");
 			}else{
 				recall = new Function("init_"+newView+"()");
-				recall();  }
+				recall(); 
+			}
 		}
 		/**
 		 * loadMenu: Loads the menu according to the view

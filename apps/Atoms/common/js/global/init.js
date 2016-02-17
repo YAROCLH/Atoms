@@ -3,8 +3,8 @@
  * Variables Declaration
 */
 
-		//http://atoms.mybluemix.net/Pages/
-		//http://127.0.0.1:12884/liberty-HelloWorld/Pages/
+		//http://atoms.mybluemix.net/Service
+		//http://127.0.0.1:14826/liberty-HelloWorld/Service/
 		var Server="http://atoms.mybluemix.net/Pages/",
 			Login_Json=Server+"Login.jsp",
 			myScore_Json=Server+"UserScore.jsp",
