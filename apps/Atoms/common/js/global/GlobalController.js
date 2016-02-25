@@ -132,7 +132,7 @@
 					})).then(function(){
 				  return json_data;
 			  });
-		}
+		}k
 		
 		
 		function encodeString(toEncode){
